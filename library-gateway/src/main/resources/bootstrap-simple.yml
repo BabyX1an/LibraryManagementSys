@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: library-gateway
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      discovery:
+        server-addr: localhost:8848
+        namespace: library-system
+        group: DEFAULT_GROUP
+      config:
+        server-addr: localhost:8848
+        namespace: adbaa99d-5656-4a9c-87fe-0c51137d338f
+        group: DEFAULT_GROUP
+        file-extension: yaml
+        shared-configs:
+          - data-id: gateway-common.yaml
+            group: DEFAULT_GROUP
+            refresh: true

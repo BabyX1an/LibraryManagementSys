@@ -1,0 +1,43 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: library-gateway
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      discovery:
+        server-addr: localhost:8848
+        namespace: adbaa99d-5656-4a9c-87fe-0c51137d338f
+        group: DEFAULT_GROUP
+  gateway:
+    discovery:
+      locator:
+        enabled: true
+        lower-case-service-id: true
+    routes:
+        - id: book-service
+          uri: http://localhost:8105
+          predicates:
+            - Path=/api/v1/books/**
+          filters:
+            - StripPrefix=0
+        - id: user-service
+          uri: http://localhost:8106
+          predicates:
+            - Path=/api/v1/users/**
+          filters:
+            - StripPrefix=0
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,gateway
+  endpoint:
+    health:
+      show-details: always

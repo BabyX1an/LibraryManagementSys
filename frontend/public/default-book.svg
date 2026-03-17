@@ -1,0 +1,7 @@
+<svg width="280" height="280" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+  <rect width="280" height="280" fill="#f5f5f5" rx="8"/>
+  <rect x="40" y="40" width="200" height="140" fill="#e0e0e0" rx="4"/>
+  <text x="140" y="100" text-anchor="middle" font-size="16" fill="#909399">暂无封面</text>
+  <rect x="50" y="195" width="180" height="30" fill="#409eff" rx="4"/>
+  <text x="140" y="215" text-anchor="middle" font-size="12" fill="#fff">图书封面</text>
+</svg>

@@ -1,0 +1,78 @@
+server:
+  port: 8106
+
+spring:
+  application:
+    name: user-service
+  profiles:
+    active: dev
+  config:
+    import: optional:nacos:user-service.yaml
+  cloud:
+    nacos:
+      username: nacos
+      password: nacos
+      discovery:
+        server-addr: localhost:8848
+        namespace: adbaa99d-5656-4a9c-87fe-0c51137d338f
+        group: DEFAULT_GROUP
+      config:
+        server-addr: localhost:8848
+        namespace: adbaa99d-5656-4a9c-87fe-0c51137d338f
+        group: DEFAULT_GROUP
+        file-extension: yaml
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/library_system?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: root
+
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+    timeout: 10000
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.library.service.user.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+
+knife4j:
+  enable: true
+  openapi:
+    title: 用户管理API
+    description: "用户管理服务接口文档"
+    email: admin@library.com
+    concat: 管理员
+    url: http://localhost:8102
+    version: v1.0.0
+    license: Apache 2.0
+    license-url: https://www.apache.org/licenses/LICENSE-2.0
+    terms-of-service-url: https://localhost:8102/terms
+  setting:
+    language: zh_cn
