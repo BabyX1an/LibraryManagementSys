@@ -6,8 +6,8 @@ export interface User {
   realName?: string
   email?: string
   phone?: string
-  role?: string
-  status?: string
+  role?: number  // 1-普通用户, 2-管理员
+  status?: number  // 1-正常, 2-禁用
   avatarUrl?: string
   lastLoginTime?: string
   createdAt?: string
@@ -28,7 +28,7 @@ export interface Book {
   coverUrl?: string
   stock?: number
   borrowedCount?: number
-  status?: string
+  status?: number  // 1-可借, 0-下架
   createdAt?: string
   updatedAt?: string
   deleted?: number

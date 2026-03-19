@@ -57,6 +57,6 @@ INSERT INTO `book` (`isbn`, `title`, `author`, `publisher`, `publish_date`, `cat
 ('9787115282246', '算法导论', 'Thomas H. Cormen', '机械工业出版社', '2013-01-01', '算法', '计算机算法经典教材', 6, 1);
 
 INSERT INTO `user` (`username`, `password`, `real_name`, `email`, `phone`, `role`, `status`) VALUES
-('admin', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iKTVYITi', '管理员', 'admin@library.com', '13800138000', 2, 1),
-('teacher', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iKTVYITi', '教师用户', 'teacher@library.com', '13800138001', 1, 1),
-('student', '$2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iKTVYITi', '学生用户', 'student@library.com', '13800138002', 1, 1);
+('admin', '0192023a7bbd73250516f069df18b500', '管理员', 'admin@library.com', '13800138000', 2, 1),
+('teacher', '0192023a7bbd73250516f069df18b500', '教师用户', 'teacher@library.com', '13800138001', 1, 1),
+('student', '0192023a7bbd73250516f069df18b500', '学生用户', 'student@library.com', '13800138002', 1, 1);

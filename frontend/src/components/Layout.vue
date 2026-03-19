@@ -83,7 +83,7 @@ const showSidebar = computed(() => {
 
 // 判断是否是管理员
 const isAdmin = computed(() => {
-  return user.value?.role === 'ADMIN'
+  return user.value?.role === 'ADMIN' || user.value?.role === 2
 })
 
 // 当前激活的菜单

@@ -20,11 +20,12 @@ export const userApi = {
   },
 
   // 更新用户
-  updateUser(user: Partial<User>, id?: number) {
-    if (id) {
-      return request.put<User>(`/v1/users/${id}`, user)
+  updateUser(user: Partial<User>) {
+    const id = user.id
+    if (!id) {
+      throw new Error('更新用户时必须提供用户ID')
     }
-    return request.put<User>('/v1/users', user)
+    return request.put<User>(`/v1/users/${id}`, user)
   },
 
   // 删除用户
@@ -34,11 +35,17 @@ export const userApi = {
 
   // 用户登录
   login(data: LoginRequest) {
+    console.log('调用登录API，参数:', data)
     return request.post('/v1/users/login', data)
   },
 
   // 获取当前用户信息
   getCurrentUser() {
-    return request.get('/v1/users/me')
+    return request.get<User>('/v1/users/me')
+  },
+
+  // 更新当前用户信息
+  updateCurrentUser(user: Partial<User>) {
+    return request.put<User>('/v1/users/me', user)
   }
 }

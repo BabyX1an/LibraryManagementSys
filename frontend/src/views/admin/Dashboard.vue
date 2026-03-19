@@ -1,5 +1,4 @@
 <template>
-  <AdminLayout>
     <div class="dashboard-container">
       <!-- 统计卡片 -->
       <el-row :gutter="20" class="stats-row">
@@ -104,7 +103,6 @@
         </el-timeline>
       </el-card>
     </div>
-  </AdminLayout>
 </template>
 
 <script setup lang="ts">

@@ -40,6 +40,20 @@ const routes: RouteRecordRaw[] = [
     ]
   },
   {
+    path: '/profile',
+    name: 'Profile',
+    component: Layout,
+    meta: { requiresAuth: true },
+    children: [
+      {
+        path: '',
+        name: 'ProfileContent',
+        component: () => import('@/views/user/Profile.vue'),
+        meta: { title: '个人信息', requiresAuth: true }
+      }
+    ]
+  },
+  {
     path: '/login',
     name: 'Login',
     component: () => import('@/views/Login.vue'),
@@ -90,9 +104,15 @@ router.beforeEach((to, from, next) => {
 
   if (to.meta.requiresAuth && !token) {
     next('/login')
-  } else if (roles && user && !roles.includes(user.role as string)) {
-    ElMessage.error('无权访问此页面')
-    next(from.path)
+  } else if (roles && user) {
+    // 检查角色：支持数字 2 和字符串 'ADMIN'
+    const userRole = user.role
+    if (!roles.includes(userRole as string) && userRole !== 2) {
+      ElMessage.error('无权访问此页面')
+      next(from.path)
+    } else {
+      next()
+    }
   } else {
     next()
   }

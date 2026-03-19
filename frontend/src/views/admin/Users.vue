@@ -1,5 +1,4 @@
 <template>
-  <AdminLayout>
     <div class="users-container">
       <!-- 工具栏 -->
       <el-card class="toolbar-card">
@@ -37,15 +36,15 @@
           <el-table-column prop="phone" label="手机号" width="130" />
           <el-table-column prop="role" label="角色" width="100">
             <template #default="{ row }">
-              <el-tag :type="row.role === 'ADMIN' ? 'danger' : 'primary'" size="small">
-                {{ row.role === 'ADMIN' ? '管理员' : '普通用户' }}
+              <el-tag :type="row.role === 2 ? 'danger' : 'primary'" size="small">
+                {{ row.role === 2 ? '管理员' : '普通用户' }}
               </el-tag>
             </template>
           </el-table-column>
           <el-table-column prop="status" label="状态" width="100">
             <template #default="{ row }">
-              <el-tag :type="row.status === 'ACTIVE' ? 'success' : 'danger'" size="small">
-                {{ row.status === 'ACTIVE' ? '正常' : '禁用' }}
+              <el-tag :type="row.status === 1 ? 'success' : 'danger'" size="small">
+                {{ row.status === 1 ? '正常' : '禁用' }}
               </el-tag>
             </template>
           </el-table-column>
@@ -110,14 +109,14 @@
           </el-form-item>
           <el-form-item label="角色" prop="role">
             <el-radio-group v-model="userForm.role">
-              <el-radio label="USER">普通用户</el-radio>
-              <el-radio label="ADMIN">管理员</el-radio>
+              <el-radio :value="1">普通用户</el-radio>
+              <el-radio :value="2">管理员</el-radio>
             </el-radio-group>
           </el-form-item>
           <el-form-item label="状态" prop="status">
             <el-radio-group v-model="userForm.status">
-              <el-radio label="ACTIVE">正常</el-radio>
-              <el-radio label="INACTIVE">禁用</el-radio>
+              <el-radio :value="1">正常</el-radio>
+              <el-radio :value="2">禁用</el-radio>
             </el-radio-group>
           </el-form-item>
           <el-form-item label="头像URL">
@@ -130,7 +129,6 @@
         </template>
       </el-dialog>
     </div>
-  </AdminLayout>
 </template>
 
 <script setup lang="ts">
@@ -164,8 +162,8 @@ const userForm = reactive<Partial<User>>({
   realName: '',
   email: '',
   phone: '',
-  role: 'USER',
-  status: 'ACTIVE',
+  role: 1,
+  status: 1,
   avatarUrl: ''
 })
 
@@ -280,8 +278,8 @@ const resetForm = () => {
   userForm.realName = ''
   userForm.email = ''
   userForm.phone = ''
-  userForm.role = 'USER'
-  userForm.status = 'ACTIVE'
+  userForm.role = 1
+  userForm.status = 1
   userForm.avatarUrl = ''
   userFormRef.value?.resetFields()
 }

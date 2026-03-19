@@ -25,10 +25,14 @@ request.interceptors.request.use(
 request.interceptors.response.use(
   (response) => {
     const res = response.data
+    console.log('请求响应:', res)
+    console.log('响应类型:', typeof res)
+    console.log('响应包含code:', res && typeof res === 'object' && 'code' in res)
 
     // 检查是否是 ApiResponse 格式
     if (typeof res === 'object' && res !== null && 'code' in res) {
       const apiRes: ApiResponse = res
+      console.log('ApiResponse格式:', apiRes)
 
       if (apiRes.code !== 200) {
         ElMessage.error(apiRes.message || '请求失败')
@@ -50,6 +54,7 @@ request.interceptors.response.use(
     return response.data
   },
   (error) => {
+    console.error('请求错误:', error)
     ElMessage.error(error.message || '网络请求失败')
     return Promise.reject(error)
   }

@@ -53,4 +53,18 @@ public interface UserService extends IService<User> {
      * @return 用户信息
      */
     User login(String username, String password);
+
+    /**
+     * 根据用户ID查询用户
+     * @param userId 用户ID
+     * @return 用户信息
+     */
+    User getUserById(Long userId);
+
+    /**
+     * 更新当前用户信息
+     * @param user 用户信息
+     * @return 是否成功
+     */
+    boolean updateCurrentUser(User user);
 }

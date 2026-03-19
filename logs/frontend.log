@@ -3,7 +3,7 @@
 > vite
 
 
-  VITE v4.5.14  ready in 304 ms
+  VITE v4.5.14  ready in 290 ms
 
   ➜  Local:   http://localhost:3001/
   ➜  Network: use --host to expose
@@ -11,5 +11,3 @@ DEPRECATION WARNING [legacy-js-api]: The legacy JS API is deprecated and will be
 
 More info: https://sass-lang.com/d/legacy-js-api
 
-(node:42339) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
-(Use `node --trace-deprecation ...` to show where the warning was created)

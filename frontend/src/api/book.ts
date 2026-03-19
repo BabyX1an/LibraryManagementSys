@@ -20,11 +20,12 @@ export const bookApi = {
   },
 
   // 更新图书
-  updateBook(book: Partial<Book>, id?: number) {
-    if (id) {
-      return request.put<Book>(`/v1/books/${id}`, book)
+  updateBook(book: Partial<Book>) {
+    const id = book.id
+    if (!id) {
+      throw new Error('更新图书时必须提供图书ID')
     }
-    return request.put<Book>('/v1/books', book)
+    return request.put<Book>(`/v1/books/${id}`, book)
   },
 
   // 删除图书

@@ -1,5 +1,4 @@
 <template>
-  <AdminLayout>
     <div class="books-container">
       <!-- 工具栏 -->
       <el-card class="toolbar-card">
@@ -59,8 +58,8 @@
           <el-table-column prop="borrowedCount" label="借阅次数" width="100" align="center" />
           <el-table-column prop="status" label="状态" width="100">
             <template #default="{ row }">
-              <el-tag :type="row.status === 'AVAILABLE' ? 'success' : 'danger'">
-                {{ row.status === 'AVAILABLE' ? '可借' : '下架' }}
+              <el-tag :type="row.status === 1 ? 'success' : 'danger'">
+                {{ row.status === 1 ? '可借' : '下架' }}
               </el-tag>
             </template>
           </el-table-column>
@@ -144,8 +143,8 @@
           </el-form-item>
           <el-form-item label="状态">
             <el-radio-group v-model="bookForm.status">
-              <el-radio label="AVAILABLE">可借</el-radio>
-              <el-radio label="UNAVAILABLE">下架</el-radio>
+              <el-radio :value="1">可借</el-radio>
+              <el-radio :value="0">下架</el-radio>
             </el-radio-group>
           </el-form-item>
         </el-form>
@@ -155,7 +154,6 @@
         </template>
       </el-dialog>
     </div>
-  </AdminLayout>
 </template>
 
 <script setup lang="ts">
@@ -194,7 +192,7 @@ const bookForm = reactive<Partial<Book>>({
   stock: 10,
   coverUrl: '',
   description: '',
-  status: 'AVAILABLE'
+  status: 1
 })
 
 const dialogTitle = computed(() => (isEdit.value ? '编辑图书' : '新增图书'))
@@ -307,7 +305,7 @@ const resetForm = () => {
   bookForm.stock = 10
   bookForm.coverUrl = ''
   bookForm.description = ''
-  bookForm.status = 'AVAILABLE'
+  bookForm.status = 1
   bookFormRef.value?.resetFields()
 }
 
