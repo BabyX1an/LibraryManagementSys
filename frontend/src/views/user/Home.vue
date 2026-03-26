@@ -32,7 +32,7 @@
             <el-image
               :src="book.coverUrl || '/default-book.svg'"
               fit="cover"
-              :preview-src-list="[book.coverUrl || '/default-book.svg']"
+              :lazy="false"
             >
               <template #error>
                 <div class="image-slot">
@@ -73,6 +73,7 @@ const fetchPopularBooks = async () => {
   loading.value = true
   try {
     const books = await bookApi.getPopularBooks(8)
+    console.log('热门图书数据:', books)  // 调试用
     popularBooks.value = Array.isArray(books) ? books : []
   } catch (error) {
     console.error('获取热门图书失败:', error)

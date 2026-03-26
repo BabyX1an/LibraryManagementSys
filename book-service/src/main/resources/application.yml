@@ -1,6 +1,11 @@
 server:
   port: 8105
 
+# 图片存储配置
+app:
+  image:
+    location: /Users/mortis/LibraryImages
+
 spring:
   application:
     name: book-service

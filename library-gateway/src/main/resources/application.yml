@@ -14,18 +14,22 @@ spring:
         server-addr: localhost:8848
         namespace: adbaa99d-5656-4a9c-87fe-0c51137d338f
         group: DEFAULT_GROUP
-  gateway:
-    discovery:
-      locator:
-        enabled: true
-        lower-case-service-id: true
-    routes:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      routes:
         - id: book-service
           uri: http://localhost:8105
           predicates:
             - Path=/api/v1/books/**
           filters:
             - StripPrefix=0
+        - id: book-images
+          uri: http://localhost:8105
+          predicates:
+            - Path=/images/**
         - id: user-service
           uri: http://localhost:8106
           predicates:
