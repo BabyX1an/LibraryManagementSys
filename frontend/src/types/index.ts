@@ -34,6 +34,20 @@ export interface Book {
   deleted?: number
 }
 
+// 借阅记录类型
+export interface BorrowRecord {
+  id?: number
+  userId?: number
+  bookId?: number
+  borrowTime?: string
+  dueTime?: string
+  returnTime?: string
+  status?: number  // 1-借阅中，2-已归还，3-已逾期
+  createdAt?: string
+  updatedAt?: string
+  book?: Book  // 关联的图书信息
+}
+
 // 分页响应类型
 export interface PageResponse<T> {
   records: T[]

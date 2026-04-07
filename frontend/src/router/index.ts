@@ -40,6 +40,20 @@ const routes: RouteRecordRaw[] = [
     ]
   },
   {
+    path: '/my-borrow',
+    name: 'MyBorrow',
+    component: Layout,
+    meta: { requiresAuth: true },
+    children: [
+      {
+        path: '',
+        name: 'MyBorrowContent',
+        component: () => import('@/views/user/MyBorrow.vue'),
+        meta: { title: '我的借阅', requiresAuth: true }
+      }
+    ]
+  },
+  {
     path: '/profile',
     name: 'Profile',
     component: Layout,

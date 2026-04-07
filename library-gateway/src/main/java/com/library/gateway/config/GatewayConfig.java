@@ -21,6 +21,11 @@ public class GatewayConfig {
                         .path("/api/v1/users/**")
                         .uri("http://localhost:8106")
                 )
+                // Borrow Service 路由（借阅服务在book-service中）
+                .route("borrow-service", r -> r
+                        .path("/api/v1/borrow/**")
+                        .uri("http://localhost:8105")
+                )
                 .build();
     }
 }

@@ -20,6 +20,11 @@
           <template #title>图书列表</template>
         </el-menu-item>
 
+        <el-menu-item index="/my-borrow">
+          <el-icon><Notebook /></el-icon>
+          <template #title>我的借阅</template>
+        </el-menu-item>
+
         <el-sub-menu index="/admin" v-if="isAdmin">
           <template #title>
             <el-icon><Setting /></el-icon>

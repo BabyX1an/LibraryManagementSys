@@ -31,7 +31,7 @@
           <div class="book-cover">
             <el-image
               :src="book.coverUrl || '/default-book.svg'"
-              fit="cover"
+              fit="contain"
               :lazy="false"
             >
               <template #error>
@@ -175,11 +175,16 @@ onMounted(() => {
   height: 280px;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #f5f5f5;
+  background-color: #fff;  /* 白色背景，填充不足部分 */
 
   .el-image {
     width: 100%;
     height: 100%;
+  }
+
+  /* 图片顶部对齐，保持比例 */
+  :deep(img) {
+    object-position: top;
   }
 
   .image-slot {

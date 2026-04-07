@@ -45,7 +45,7 @@
         <div class="book-cover">
           <el-image
             :src="book.coverUrl || '/default-book.png'"
-            fit="cover"
+            fit="contain"
             :preview-src-list="[book.coverUrl || '/default-book.png']"
           >
             <template #error>
@@ -193,11 +193,16 @@ onMounted(() => {
   height: 280px;
   border-radius: 8px;
   overflow: hidden;
-  background-color: #f5f5f5;
+  background-color: #fff;  /* 白色背景 */
 
   .el-image {
     width: 100%;
     height: 100%;
+  }
+
+  /* 图片顶部对齐 */
+  :deep(img) {
+    object-position: top;
   }
 
   .image-slot {

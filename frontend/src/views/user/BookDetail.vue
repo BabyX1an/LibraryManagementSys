@@ -14,7 +14,7 @@
             <el-image
               :src="book.coverUrl || '/default-book.png'"
               fit="contain"
-              style="width: 300px; height: 400px"
+              style="width: 300px; height: 400px; background-color: #fff;"
             >
               <template #error>
                 <div class="image-slot">
@@ -48,6 +48,7 @@
                 type="primary"
                 size="large"
                 :disabled="book.stock === 0"
+                :loading="borrowLoading"
                 @click="handleBorrow"
               >
                 <el-icon><ShoppingCart /></el-icon>
@@ -69,12 +70,14 @@ import { useRoute, useRouter } from 'vue-router'
 import { ArrowLeft, Picture, ShoppingCart } from '@element-plus/icons-vue'
 import { ElMessage } from 'element-plus'
 import { bookApi } from '@/api/book'
+import { borrowApi } from '@/api/borrow'
 import type { Book } from '@/types'
 import Layout from '@/components/Layout.vue'
 
 const route = useRoute()
 const router = useRouter()
 const loading = ref(false)
+const borrowLoading = ref(false)
 const book = ref<Book | null>(null)
 
 // 获取图书详情
@@ -98,8 +101,24 @@ const goBack = () => {
 }
 
 // 借阅图书
-const handleBorrow = () => {
-  ElMessage.success('借阅请求已提交')
+const handleBorrow = async () => {
+  if (!book.value?.id) return
+
+  borrowLoading.value = true
+  try {
+    await borrowApi.borrowBook(book.value.id)
+    ElMessage.success('借阅成功')
+    // 更新库存显示
+    if (book.value.stock !== undefined) {
+      book.value.stock -= 1
+    }
+    // 跳转到我的借阅页面
+    router.push('/my-borrow')
+  } catch (error) {
+    console.error('借阅失败:', error)
+  } finally {
+    borrowLoading.value = false
+  }
 }
 
 onMounted(() => {
@@ -125,6 +144,12 @@ onMounted(() => {
   .el-image {
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+  }
+
+  /* 图片顶部对齐 */
+  :deep(img) {
+    object-position: top;
   }
 
   .image-slot {
