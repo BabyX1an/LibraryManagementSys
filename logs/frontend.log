@@ -3,7 +3,7 @@
 > vite
 
 
-  VITE v4.5.14  ready in 327 ms
+  VITE v4.5.14  ready in 322 ms
 
   ➜  Local:   http://localhost:3001/
   ➜  Network: use --host to expose
@@ -11,9 +11,5 @@ DEPRECATION WARNING [legacy-js-api]: The legacy JS API is deprecated and will be
 
 More info: https://sass-lang.com/d/legacy-js-api
 
-(node:60343) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(node:48910) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
 (Use `node --trace-deprecation ...` to show where the warning was created)
-10:32:50 PM [vite] http proxy error at /api/v1/books/popular?limit=8:
-AggregateError [ECONNREFUSED]: 
-    at internalConnectMultiple (node:net:1134:18)
-    at afterConnectMultiple (node:net:1715:7)

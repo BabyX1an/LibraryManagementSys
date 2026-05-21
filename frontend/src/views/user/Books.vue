@@ -33,6 +33,47 @@
     </el-form>
   </el-card>
 
+  <!-- 智能匹配结果 -->
+  <el-card v-if="searchForm.title?.trim()" class="ai-results-card">
+    <template #header>
+      <div class="card-header">
+        <h3>
+          <el-tag type="success" effect="dark" size="small" style="margin-right: 8px;">智能推荐</el-tag>
+          智能匹配
+        </h3>
+      </div>
+    </template>
+
+    <div v-loading="aiLoading" class="books-grid">
+      <div
+        v-for="book in aiResults"
+        :key="'ai-' + book.id"
+        class="book-card"
+        @click="viewBookDetail(book.id!)"
+      >
+        <div class="book-cover">
+          <el-image
+            :src="book.coverUrl || '/default-book.png'"
+            fit="contain"
+          >
+            <template #error>
+              <div class="image-slot">
+                <el-icon><Picture /></el-icon>
+              </div>
+            </template>
+          </el-image>
+        </div>
+        <div class="book-info">
+          <h4 class="book-title">{{ book.title }}</h4>
+          <p class="book-author">{{ book.author }}</p>
+          <el-tag v-if="book.category" size="small" type="info">{{ book.category }}</el-tag>
+        </div>
+      </div>
+    </div>
+
+    <el-empty v-if="!aiLoading && aiResults.length === 0" description="暂无智能匹配结果" />
+  </el-card>
+
   <!-- 图书列表 -->
   <el-card class="books-list">
     <div v-loading="loading" class="books-grid">
@@ -92,6 +133,7 @@ import { ref, reactive, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { Search, RefreshRight, Picture } from '@element-plus/icons-vue'
 import { bookApi } from '@/api/book'
+import { aiApi } from '@/api/ai'
 import type { Book } from '@/types'
 import Layout from '@/components/Layout.vue'
 
@@ -99,6 +141,8 @@ const router = useRouter()
 const loading = ref(false)
 const bookList = ref<Book[]>([])
 const total = ref(0)
+const aiResults = ref<Book[]>([])
+const aiLoading = ref(false)
 
 const searchForm = reactive({
   title: '',
@@ -136,6 +180,12 @@ const fetchBooks = async () => {
 const handleSearch = () => {
   pagination.current = 1
   fetchBooks()
+  // 有搜索词时触发AI语义搜索
+  if (searchForm.title?.trim()) {
+    fetchAiResults(searchForm.title.trim())
+  } else {
+    aiResults.value = []
+  }
 }
 
 // 重置
@@ -144,7 +194,22 @@ const handleReset = () => {
   searchForm.author = ''
   searchForm.category = ''
   pagination.current = 1
+  aiResults.value = []
   fetchBooks()
+}
+
+// AI语义搜索
+const fetchAiResults = async (query: string) => {
+  aiLoading.value = true
+  try {
+    const books = await aiApi.semanticSearch(query, 6)
+    aiResults.value = (Array.isArray(books) ? books : []).map((b: any) => ({ ...b, id: b.bookId ?? b.id }))
+  } catch (error) {
+    console.error('AI语义搜索失败:', error)
+    aiResults.value = []
+  } finally {
+    aiLoading.value = false
+  }
 }
 
 // 查看图书详情
@@ -166,6 +231,38 @@ onMounted(() => {
 
 .search-card {
   margin-bottom: 20px;
+
+  :deep(.el-form--inline .el-form-item) {
+    margin-right: 16px;
+  }
+
+  :deep(.el-input) {
+    width: 180px;
+  }
+
+  :deep(.el-select) {
+    width: 150px;
+  }
+}
+
+.ai-results-card {
+  margin-bottom: 20px;
+
+  .card-header {
+    h3 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
 }
 
 .books-list {

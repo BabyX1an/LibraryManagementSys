@@ -12,18 +12,18 @@
       </div>
     </el-card>
 
-    <!-- 热门图书 -->
+    <!-- 猜你喜欢 -->
     <el-card class="popular-books">
       <template #header>
         <div class="card-header">
-          <h3>热门图书</h3>
+          <h3>猜你喜欢</h3>
           <el-button text type="primary" @click="goToBooks">查看更多</el-button>
         </div>
       </template>
 
       <div v-loading="loading" class="books-grid">
         <div
-          v-for="book in popularBooks"
+          v-for="book in recommendBooks"
           :key="book.id"
           class="book-card"
           @click="viewBookDetail(book.id!)"
@@ -52,7 +52,7 @@
         </div>
       </div>
 
-      <el-empty v-if="!loading && popularBooks.length === 0" description="暂无热门图书" />
+      <el-empty v-if="!loading && recommendBooks.length === 0" description="暂无推荐图书" />
     </el-card>
   </div>
 </template>
@@ -62,21 +62,27 @@ import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { Reading, Picture } from '@element-plus/icons-vue'
 import { bookApi } from '@/api/book'
+import { aiApi } from '@/api/ai'
 import type { Book } from '@/types'
 
 const router = useRouter()
 const loading = ref(false)
-const popularBooks = ref<Book[]>([])
+const recommendBooks = ref<Book[]>([])
 
-// 获取热门图书
-const fetchPopularBooks = async () => {
+// 获取推荐图书
+const fetchRecommendBooks = async () => {
   loading.value = true
   try {
-    const books = await bookApi.getPopularBooks(8)
-    console.log('热门图书数据:', books)  // 调试用
-    popularBooks.value = Array.isArray(books) ? books : []
+    try {
+      const books = await aiApi.getRecommendations(10)
+      recommendBooks.value = (Array.isArray(books) ? books : []).map((b: any) => ({ ...b, id: b.bookId ?? b.id }))
+    } catch {
+      // AI推荐失败时回退到热门图书
+      const books = await bookApi.getPopularBooks(10)
+      recommendBooks.value = Array.isArray(books) ? books : []
+    }
   } catch (error) {
-    console.error('获取热门图书失败:', error)
+    console.error('获取推荐图书失败:', error)
   } finally {
     loading.value = false
   }
@@ -93,7 +99,7 @@ const viewBookDetail = (id: number) => {
 }
 
 onMounted(() => {
-  fetchPopularBooks()
+  fetchRecommendBooks()
 })
 </script>
 

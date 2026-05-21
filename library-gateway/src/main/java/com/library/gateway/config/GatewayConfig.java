@@ -26,6 +26,11 @@ public class GatewayConfig {
                         .path("/api/v1/borrow/**")
                         .uri("http://localhost:8105")
                 )
+                // AI Service 路由
+                .route("ai-service", r -> r
+                        .path("/api/v1/ai/**")
+                        .uri("http://localhost:8108")
+                )
                 .build();
     }
 }
