@@ -184,7 +184,7 @@ if check_port 8108; then
 
   nohup "$PYTHON" -m app.main > "$LOG_DIR/ai-service.log" 2>&1 &
   echo $! > "$PID_DIR/ai-service.pid"
-  if wait_for_port 8108 "ai-service" 20; then
+  if wait_for_port 8108 "ai-service" 120; then
     echo -e "  ${GREEN}AI Service 启动成功${NC}"
   fi
 else

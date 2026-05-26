@@ -6,6 +6,7 @@ import com.library.service.book.entity.BorrowRecord;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 借阅记录Mapper接口
@@ -34,4 +35,14 @@ public interface BorrowRecordMapper extends BaseMapper<BorrowRecord> {
      * @return 借阅记录
      */
     BorrowRecord findUnreturnedBorrow(@Param("userId") Long userId, @Param("bookId") Long bookId);
+
+    /**
+     * 统计最近N天每日借阅数量
+     */
+    List<Map<String, Object>> countBorrowTrend(@Param("days") int days);
+
+    /**
+     * 查询最近N条借阅/归还活动记录
+     */
+    List<Map<String, Object>> listRecentActivities(@Param("limit") int limit);
 }

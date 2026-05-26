@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.library.service.book.entity.BorrowRecord;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 借阅服务接口
@@ -41,4 +42,9 @@ public interface BorrowService extends IService<BorrowRecord> {
      * @return 分页结果
      */
     Page<BorrowRecord> getBorrowHistory(Page<BorrowRecord> page, Long userId);
+
+    /**
+     * 获取仪表盘统计数据（借阅趋势+最近活动）
+     */
+    Map<String, Object> getDashboardStats();
 }

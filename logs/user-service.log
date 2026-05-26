@@ -35,105 +35,276 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.0)
 
-2026-05-21T12:19:04.910+08:00  INFO 48839 --- [user-service] [           main] c.l.service.user.UserServiceApplication  : Starting UserServiceApplication using Java 21.0.9 with PID 48839 (/Users/mortis/Documents/蔡石贤的MAC文件/CS学习/Java/Java项目/project/LibraryManagementSys/user-service/target/classes started by mortis in /Users/mortis/Documents/蔡石贤的MAC文件/CS学习/Java/Java项目/project/LibraryManagementSys/user-service)
-2026-05-21T12:19:04.911+08:00  INFO 48839 --- [user-service] [           main] c.l.service.user.UserServiceApplication  : The following 1 profile is active: "dev"
-2026-05-21T12:19:04.929+08:00  WARN 48839 --- [user-service] [           main] c.a.c.n.c.NacosConfigDataLoader          : [Nacos Config] config[dataId=user-service.yaml, group=DEFAULT_GROUP] is empty
-2026-05-21T12:19:05.930+08:00  INFO 48839 --- [user-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2026-05-21T12:19:05.934+08:00  INFO 48839 --- [user-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2026-05-21T12:19:05.964+08:00  INFO 48839 --- [user-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
-2026-05-21T12:19:06.206+08:00  INFO 48839 --- [user-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=19ba6060-d4c1-3076-a4da-d8345d6f1b30
-2026-05-21T12:19:06.444+08:00  INFO 48839 --- [user-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8106 (http)
-2026-05-21T12:19:06.453+08:00  INFO 48839 --- [user-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-21T12:19:06.453+08:00  INFO 48839 --- [user-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
-2026-05-21T12:19:06.485+08:00  INFO 48839 --- [user-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-05-21T12:19:06.485+08:00  INFO 48839 --- [user-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1556 ms
+2026-05-25T13:06:45.400+08:00  INFO 88894 --- [user-service] [           main] c.l.service.user.UserServiceApplication  : Starting UserServiceApplication using Java 21.0.9 with PID 88894 (/Users/mortis/Documents/蔡石贤的MAC文件/CS学习/Java/Java项目/project/LibraryManagementSys/user-service/target/classes started by mortis in /Users/mortis/Documents/蔡石贤的MAC文件/CS学习/Java/Java项目/project/LibraryManagementSys/user-service)
+2026-05-25T13:06:45.401+08:00  INFO 88894 --- [user-service] [           main] c.l.service.user.UserServiceApplication  : The following 1 profile is active: "dev"
+2026-05-25T13:06:45.417+08:00  WARN 88894 --- [user-service] [           main] c.a.c.n.c.NacosConfigDataLoader          : [Nacos Config] config[dataId=user-service.yaml, group=DEFAULT_GROUP] is empty
+2026-05-25T13:06:45.808+08:00  INFO 88894 --- [user-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-05-25T13:06:45.809+08:00  INFO 88894 --- [user-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-05-25T13:06:45.821+08:00  INFO 88894 --- [user-service] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+2026-05-25T13:06:45.906+08:00  INFO 88894 --- [user-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=19ba6060-d4c1-3076-a4da-d8345d6f1b30
+2026-05-25T13:06:46.093+08:00  INFO 88894 --- [user-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8106 (http)
+2026-05-25T13:06:46.097+08:00  INFO 88894 --- [user-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-25T13:06:46.097+08:00  INFO 88894 --- [user-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2026-05-25T13:06:46.118+08:00  INFO 88894 --- [user-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-25T13:06:46.118+08:00  INFO 88894 --- [user-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 700 ms
 Logging initialized using 'class org.apache.ibatis.logging.stdout.StdOutImpl' adapter.
-Get /10.6.177.136 network interface 
+Get /10.4.132.100 network interface 
 Get network interface info: name:en0 (en0)
-Initialization Sequence datacenterId:0 workerId:10
+Initialization Sequence datacenterId:0 workerId:3
  _ _   |_  _ _|_. ___ _ |    _ 
 | | |\/|_)(_| | |_\  |_)||_|_\ 
      /               |         
                         3.5.7 
-2026-05-21T12:19:07.763+08:00  INFO 48839 --- [user-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
-2026-05-21T12:19:07.806+08:00  INFO 48839 --- [user-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8106 (http) with context path ''
-2026-05-21T12:19:07.809+08:00  INFO 48839 --- [user-service] [           main] com.alibaba.nacos.client.naming          : initializer namespace from ans.namespace attribute : null
-2026-05-21T12:19:07.810+08:00  INFO 48839 --- [user-service] [           main] com.alibaba.nacos.client.naming          : initializer namespace from ALIBABA_ALIWARE_NAMESPACE attribute :null
-2026-05-21T12:19:07.810+08:00  INFO 48839 --- [user-service] [           main] com.alibaba.nacos.client.naming          : initializer namespace from namespace attribute :null
-2026-05-21T12:19:07.813+08:00  INFO 48839 --- [user-service] [           main] com.alibaba.nacos.client.naming          : FailoverDataSource type is class com.alibaba.nacos.client.naming.backups.datasource.DiskFailoverDataSource
-2026-05-21T12:19:07.815+08:00  INFO 48839 --- [user-service] [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
-2026-05-21T12:19:07.815+08:00  INFO 48839 --- [user-service] [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
-2026-05-21T12:19:07.958+08:00  INFO 48839 --- [user-service] [           main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of fbc10317-51c7-4e92-bc50-e2a6f04d49df
-2026-05-21T12:19:07.959+08:00  INFO 48839 --- [user-service] [           main] com.alibaba.nacos.client.naming          : Create naming rpc client for uuid->fbc10317-51c7-4e92-bc50-e2a6f04d49df
-2026-05-21T12:19:07.959+08:00  INFO 48839 --- [user-service] [           main] com.alibaba.nacos.common.remote.client   : [fbc10317-51c7-4e92-bc50-e2a6f04d49df] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
-2026-05-21T12:19:07.959+08:00  INFO 48839 --- [user-service] [           main] com.alibaba.nacos.common.remote.client   : [fbc10317-51c7-4e92-bc50-e2a6f04d49df] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
-2026-05-21T12:19:07.959+08:00  INFO 48839 --- [user-service] [           main] com.alibaba.nacos.common.remote.client   : [fbc10317-51c7-4e92-bc50-e2a6f04d49df] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
-2026-05-21T12:19:07.960+08:00  INFO 48839 --- [user-service] [           main] com.alibaba.nacos.common.remote.client   : [fbc10317-51c7-4e92-bc50-e2a6f04d49df] Try to connect to server on start up, server: {serverIp = 'localhost', server main port = 8848}
-2026-05-21T12:19:07.960+08:00  INFO 48839 --- [user-service] [           main] c.a.n.c.remote.client.grpc.GrpcClient    : grpc client connection server:localhost ip,serverPort:9848,grpcTslConfig:{"sslProvider":"","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
-2026-05-21T12:19:07.985+08:00  INFO 48839 --- [user-service] [           main] com.alibaba.nacos.common.remote.client   : [fbc10317-51c7-4e92-bc50-e2a6f04d49df] Success to connect to server [localhost:8848] on start up, connectionId = 1779337147968_127.0.0.1_63120
-2026-05-21T12:19:07.986+08:00  INFO 48839 --- [user-service] [           main] com.alibaba.nacos.common.remote.client   : [fbc10317-51c7-4e92-bc50-e2a6f04d49df] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
-2026-05-21T12:19:07.986+08:00  INFO 48839 --- [user-service] [remote.worker.0] com.alibaba.nacos.common.remote.client   : [fbc10317-51c7-4e92-bc50-e2a6f04d49df] Notify connected event to listeners.
-2026-05-21T12:19:07.986+08:00  INFO 48839 --- [user-service] [           main] com.alibaba.nacos.common.remote.client   : [fbc10317-51c7-4e92-bc50-e2a6f04d49df] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda/0x0000008801371980
-2026-05-21T12:19:07.986+08:00  INFO 48839 --- [user-service] [remote.worker.0] com.alibaba.nacos.client.naming          : Grpc connection connect
-2026-05-21T12:19:07.986+08:00  INFO 48839 --- [user-service] [           main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] adbaa99d-5656-4a9c-87fe-0c51137d338f registering service user-service with instance Instance{instanceId='null', ip='10.6.177.136', port=8106, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={IPv6=null, preserved.register.source=SPRING_CLOUD}}
-2026-05-21T12:19:07.999+08:00  INFO 48839 --- [user-service] [           main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP user-service 10.6.177.136:8106 register finished
-2026-05-21T12:19:08.015+08:00  INFO 48839 --- [user-service] [           main] c.l.service.user.UserServiceApplication  : Started UserServiceApplication in 4.311 seconds (process running for 4.505)
-2026-05-21T12:19:08.058+08:00  INFO 48839 --- [user-service] [           main] c.a.nacos.client.config.impl.CacheData   : config listener notify warn timeout millis use default 60000 millis 
-2026-05-21T12:19:08.058+08:00  INFO 48839 --- [user-service] [           main] c.a.nacos.client.config.impl.CacheData   : nacos.cache.data.init.snapshot = true 
-2026-05-21T12:19:08.058+08:00  INFO 48839 --- [user-service] [           main] c.a.n.client.config.impl.ClientWorker    : [fixed-adbaa99d-5656-4a9c-87fe-0c51137d338f-localhost_8848] [subscribe] user-service.yaml+DEFAULT_GROUP+adbaa99d-5656-4a9c-87fe-0c51137d338f
-2026-05-21T12:19:08.062+08:00  INFO 48839 --- [user-service] [           main] c.a.nacos.client.config.impl.CacheData   : [fixed-adbaa99d-5656-4a9c-87fe-0c51137d338f-localhost_8848] [add-listener] ok, tenant=adbaa99d-5656-4a9c-87fe-0c51137d338f, dataId=user-service.yaml, group=DEFAULT_GROUP, cnt=1
-2026-05-21T12:19:08.062+08:00  INFO 48839 --- [user-service] [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=user-service.yaml, group=DEFAULT_GROUP
-2026-05-21T12:20:19.130+08:00  INFO 48839 --- [user-service] [nio-8106-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-21T12:20:19.130+08:00  INFO 48839 --- [user-service] [nio-8106-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-21T12:20:19.137+08:00  INFO 48839 --- [user-service] [nio-8106-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2026-05-25T13:06:46.960+08:00  INFO 88894 --- [user-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoint(s) beneath base path '/actuator'
+2026-05-25T13:06:46.989+08:00  INFO 88894 --- [user-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8106 (http) with context path ''
+2026-05-25T13:06:46.992+08:00  INFO 88894 --- [user-service] [           main] com.alibaba.nacos.client.naming          : initializer namespace from ans.namespace attribute : null
+2026-05-25T13:06:46.992+08:00  INFO 88894 --- [user-service] [           main] com.alibaba.nacos.client.naming          : initializer namespace from ALIBABA_ALIWARE_NAMESPACE attribute :null
+2026-05-25T13:06:46.992+08:00  INFO 88894 --- [user-service] [           main] com.alibaba.nacos.client.naming          : initializer namespace from namespace attribute :null
+2026-05-25T13:06:46.994+08:00  INFO 88894 --- [user-service] [           main] com.alibaba.nacos.client.naming          : FailoverDataSource type is class com.alibaba.nacos.client.naming.backups.datasource.DiskFailoverDataSource
+2026-05-25T13:06:46.996+08:00  INFO 88894 --- [user-service] [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.impl.NacosClientAuthServiceImpl success.
+2026-05-25T13:06:46.996+08:00  INFO 88894 --- [user-service] [           main] c.a.n.p.a.s.c.ClientAuthPluginManager    : [ClientAuthPluginManager] Load ClientAuthService com.alibaba.nacos.client.auth.ram.RamClientAuthServiceImpl success.
+2026-05-25T13:06:47.106+08:00  INFO 88894 --- [user-service] [           main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 59d2e1d8-bbba-4488-93f5-ffdb0163d419
+2026-05-25T13:06:47.107+08:00  INFO 88894 --- [user-service] [           main] com.alibaba.nacos.client.naming          : Create naming rpc client for uuid->59d2e1d8-bbba-4488-93f5-ffdb0163d419
+2026-05-25T13:06:47.107+08:00  INFO 88894 --- [user-service] [           main] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+2026-05-25T13:06:47.107+08:00  INFO 88894 --- [user-service] [           main] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+2026-05-25T13:06:47.107+08:00  INFO 88894 --- [user-service] [           main] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+2026-05-25T13:06:47.107+08:00  INFO 88894 --- [user-service] [           main] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Try to connect to server on start up, server: {serverIp = 'localhost', server main port = 8848}
+2026-05-25T13:06:47.107+08:00  INFO 88894 --- [user-service] [           main] c.a.n.c.remote.client.grpc.GrpcClient    : grpc client connection server:localhost ip,serverPort:9848,grpcTslConfig:{"sslProvider":"","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2026-05-25T13:06:47.115+08:00  INFO 88894 --- [user-service] [           main] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Success to connect to server [localhost:8848] on start up, connectionId = 1779685607110_127.0.0.1_54010
+2026-05-25T13:06:47.115+08:00  INFO 88894 --- [user-service] [           main] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2026-05-25T13:06:47.115+08:00  INFO 88894 --- [user-service] [remote.worker.0] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Notify connected event to listeners.
+2026-05-25T13:06:47.115+08:00  INFO 88894 --- [user-service] [           main] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda/0x00000005013750d8
+2026-05-25T13:06:47.115+08:00  INFO 88894 --- [user-service] [remote.worker.0] com.alibaba.nacos.client.naming          : Grpc connection connect
+2026-05-25T13:06:47.115+08:00  INFO 88894 --- [user-service] [           main] com.alibaba.nacos.client.naming          : [REGISTER-SERVICE] adbaa99d-5656-4a9c-87fe-0c51137d338f registering service user-service with instance Instance{instanceId='null', ip='10.4.132.100', port=8106, weight=1.0, healthy=true, enabled=true, ephemeral=true, clusterName='DEFAULT', serviceName='null', metadata={IPv6=[2001:da8:100d:23:0:0:0:2305], preserved.register.source=SPRING_CLOUD}}
+2026-05-25T13:06:47.121+08:00  INFO 88894 --- [user-service] [           main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP user-service 10.4.132.100:8106 register finished
+2026-05-25T13:06:47.136+08:00  INFO 88894 --- [user-service] [           main] c.l.service.user.UserServiceApplication  : Started UserServiceApplication in 2.428 seconds (process running for 2.564)
+2026-05-25T13:06:47.175+08:00  INFO 88894 --- [user-service] [           main] c.a.nacos.client.config.impl.CacheData   : config listener notify warn timeout millis use default 60000 millis 
+2026-05-25T13:06:47.175+08:00  INFO 88894 --- [user-service] [           main] c.a.nacos.client.config.impl.CacheData   : nacos.cache.data.init.snapshot = true 
+2026-05-25T13:06:47.175+08:00  INFO 88894 --- [user-service] [           main] c.a.n.client.config.impl.ClientWorker    : [fixed-adbaa99d-5656-4a9c-87fe-0c51137d338f-localhost_8848] [subscribe] user-service.yaml+DEFAULT_GROUP+adbaa99d-5656-4a9c-87fe-0c51137d338f
+2026-05-25T13:06:47.178+08:00  INFO 88894 --- [user-service] [           main] c.a.nacos.client.config.impl.CacheData   : [fixed-adbaa99d-5656-4a9c-87fe-0c51137d338f-localhost_8848] [add-listener] ok, tenant=adbaa99d-5656-4a9c-87fe-0c51137d338f, dataId=user-service.yaml, group=DEFAULT_GROUP, cnt=1
+2026-05-25T13:06:47.178+08:00  INFO 88894 --- [user-service] [           main] c.a.c.n.refresh.NacosContextRefresher    : [Nacos Config] Listening config: dataId=user-service.yaml, group=DEFAULT_GROUP
+2026-05-25T13:07:07.784+08:00  INFO 88894 --- [user-service] [nio-8106-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-25T13:07:07.791+08:00  INFO 88894 --- [user-service] [nio-8106-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-25T13:07:07.811+08:00  INFO 88894 --- [user-service] [nio-8106-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 20 ms
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@67364647] was not registered for synchronization because synchronization is not active
-2026-05-21T12:20:19.236+08:00  INFO 48839 --- [user-service] [nio-8106-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-21T12:20:19.506+08:00  INFO 48839 --- [user-service] [nio-8106-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@44c0a884
-2026-05-21T12:20:19.508+08:00  INFO 48839 --- [user-service] [nio-8106-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-JDBC Connection [HikariProxyConnection@676061624 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c0a884] will not be managed by Spring
-==>  Preparing: SELECT id,username,password,real_name,email,phone,role,status,avatar_url,last_login_time,created_at,updated_at,deleted FROM user WHERE deleted=0 AND (username = ? AND deleted = ?)
-==> Parameters: admin(String), 0(Integer)
-<==    Columns: id, username, password, real_name, email, phone, role, status, avatar_url, last_login_time, created_at, updated_at, deleted
-<==        Row: 1, admin, 0192023a7bbd73250516f069df18b500, 管理员, admin@library.com, 13800138000, 2, 1, null, 2026-05-02 10:47:46, 2026-01-23 10:37:51, 2026-03-18 17:43:58, 0
-<==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@67364647]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@691d4ee8] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@154801032 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c0a884] will not be managed by Spring
-==>  Preparing: UPDATE user SET username=?, password=?, real_name=?, email=?, phone=?, role=?, status=?, last_login_time=?, created_at=?, updated_at=? WHERE id=? AND deleted=0
-==> Parameters: admin(String), 0192023a7bbd73250516f069df18b500(String), 管理员(String), admin@library.com(String), 13800138000(String), 2(Integer), 1(Integer), 2026-05-21T12:20:19.639245(LocalDateTime), 2026-01-23T10:37:51(LocalDateTime), 2026-03-18T17:43:58(LocalDateTime), 1(Long)
-<==    Updates: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@691d4ee8]
-Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1a449115] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1091751174 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c0a884] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c428a6d] was not registered for synchronization because synchronization is not active
+2026-05-25T13:07:07.904+08:00  INFO 88894 --- [user-service] [nio-8106-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-25T13:07:08.057+08:00  INFO 88894 --- [user-service] [nio-8106-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@34921035
+2026-05-25T13:07:08.060+08:00  INFO 88894 --- [user-service] [nio-8106-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+JDBC Connection [HikariProxyConnection@1357118036 wrapping com.mysql.cj.jdbc.ConnectionImpl@34921035] will not be managed by Spring
 ==>  Preparing: SELECT * FROM `user` WHERE deleted = 0 ORDER BY created_at DESC
 ==> Parameters: 
 <==    Columns: id, username, password, real_name, email, phone, role, status, avatar_url, last_login_time, created_at, updated_at, deleted
 <==        Row: 19, 990704, e10adc3949ba59abbe56e057f20f883e, 涟一, null, null, 1, 1, null, 2026-05-07 10:17:57, 2026-05-07 10:17:52, 2026-05-07 10:17:52, 0
 <==        Row: 18, 123456, e10adc3949ba59abbe56e057f20f883e, 热门推荐测试账号, null, null, 1, 1, null, 2026-04-28 16:58:10, 2026-04-28 16:58:05, 2026-04-28 16:58:05, 0
 <==        Row: 8, 12345, e10adc3949ba59abbe56e057f20f883e, 响应时间测试账号, null, null, 1, 1, null, 2026-04-28 16:34:20, 2026-04-28 16:15:09, 2026-04-28 16:15:09, 0
-<==        Row: 7, 1234, e10adc3949ba59abbe56e057f20f883e, 小说爱好者, null, null, 1, 1, null, 2026-04-28 16:53:15, 2026-04-27 17:04:07, 2026-04-27 17:04:07, 0
-<==        Row: 5, 123, e10adc3949ba59abbe56e057f20f883e, 蔡石贤, null, null, 1, 1, null, 2026-04-28 16:32:05, 2026-04-27 16:34:22, 2026-04-28 16:57:48, 0
-<==        Row: 1, admin, 0192023a7bbd73250516f069df18b500, 管理员, admin@library.com, 13800138000, 2, 1, null, 2026-05-21 12:20:20, 2026-01-23 10:37:51, 2026-03-18 17:43:58, 0
+<==        Row: 7, 1234, e10adc3949ba59abbe56e057f20f883e, 小说爱好者, null, null, 1, 1, null, 2026-05-25 12:18:06, 2026-04-27 17:04:07, 2026-04-27 17:04:07, 0
+<==        Row: 5, 123, e10adc3949ba59abbe56e057f20f883e, 蔡石贤, null, null, 1, 1, null, 2026-05-25 12:22:46, 2026-04-27 16:34:22, 2026-04-28 16:57:48, 0
+<==        Row: 1, admin, 0192023a7bbd73250516f069df18b500, 管理员, admin@library.com, 13800138000, 2, 1, null, 2026-05-25 12:23:23, 2026-01-23 10:37:51, 2026-03-18 17:43:58, 0
 <==        Row: 2, teacher, 0192023a7bbd73250516f069df18b500, 教师用户, teacher@library.com, 13800138001, 1, 1, null, 2026-03-27 18:24:32, 2026-01-23 10:37:51, 2026-03-18 17:43:58, 0
 <==        Row: 3, student, $2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iKTVYITi, 学生用户, student@library.com, 13800138002, 1, 1, null, null, 2026-01-23 10:37:51, 2026-03-18 18:57:21, 0
 <==      Total: 8
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1a449115]
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5c428a6d]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44838a04] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@1086068300 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c0a884] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@391dd611] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1025656298 wrapping com.mysql.cj.jdbc.ConnectionImpl@34921035] will not be managed by Spring
+==>  Preparing: SELECT * FROM `user` WHERE deleted = 0 ORDER BY created_at DESC
+==> Parameters: 
+<==    Columns: id, username, password, real_name, email, phone, role, status, avatar_url, last_login_time, created_at, updated_at, deleted
+<==        Row: 19, 990704, e10adc3949ba59abbe56e057f20f883e, 涟一, null, null, 1, 1, null, 2026-05-07 10:17:57, 2026-05-07 10:17:52, 2026-05-07 10:17:52, 0
+<==        Row: 18, 123456, e10adc3949ba59abbe56e057f20f883e, 热门推荐测试账号, null, null, 1, 1, null, 2026-04-28 16:58:10, 2026-04-28 16:58:05, 2026-04-28 16:58:05, 0
+<==        Row: 8, 12345, e10adc3949ba59abbe56e057f20f883e, 响应时间测试账号, null, null, 1, 1, null, 2026-04-28 16:34:20, 2026-04-28 16:15:09, 2026-04-28 16:15:09, 0
+<==        Row: 7, 1234, e10adc3949ba59abbe56e057f20f883e, 小说爱好者, null, null, 1, 1, null, 2026-05-25 12:18:06, 2026-04-27 17:04:07, 2026-04-27 17:04:07, 0
+<==        Row: 5, 123, e10adc3949ba59abbe56e057f20f883e, 蔡石贤, null, null, 1, 1, null, 2026-05-25 12:22:46, 2026-04-27 16:34:22, 2026-04-28 16:57:48, 0
+<==        Row: 1, admin, 0192023a7bbd73250516f069df18b500, 管理员, admin@library.com, 13800138000, 2, 1, null, 2026-05-25 12:23:23, 2026-01-23 10:37:51, 2026-03-18 17:43:58, 0
+<==        Row: 2, teacher, 0192023a7bbd73250516f069df18b500, 教师用户, teacher@library.com, 13800138001, 1, 1, null, 2026-03-27 18:24:32, 2026-01-23 10:37:51, 2026-03-18 17:43:58, 0
+<==        Row: 3, student, $2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iKTVYITi, 学生用户, student@library.com, 13800138002, 1, 1, null, null, 2026-01-23 10:37:51, 2026-03-18 18:57:21, 0
+<==      Total: 8
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@391dd611]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5ff44bf1] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1540080855 wrapping com.mysql.cj.jdbc.ConnectionImpl@34921035] will not be managed by Spring
+==>  Preparing: SELECT * FROM `user` WHERE deleted = 0 ORDER BY created_at DESC
+==> Parameters: 
+<==    Columns: id, username, password, real_name, email, phone, role, status, avatar_url, last_login_time, created_at, updated_at, deleted
+<==        Row: 19, 990704, e10adc3949ba59abbe56e057f20f883e, 涟一, null, null, 1, 1, null, 2026-05-07 10:17:57, 2026-05-07 10:17:52, 2026-05-07 10:17:52, 0
+<==        Row: 18, 123456, e10adc3949ba59abbe56e057f20f883e, 热门推荐测试账号, null, null, 1, 1, null, 2026-04-28 16:58:10, 2026-04-28 16:58:05, 2026-04-28 16:58:05, 0
+<==        Row: 8, 12345, e10adc3949ba59abbe56e057f20f883e, 响应时间测试账号, null, null, 1, 1, null, 2026-04-28 16:34:20, 2026-04-28 16:15:09, 2026-04-28 16:15:09, 0
+<==        Row: 7, 1234, e10adc3949ba59abbe56e057f20f883e, 小说爱好者, null, null, 1, 1, null, 2026-05-25 12:18:06, 2026-04-27 17:04:07, 2026-04-27 17:04:07, 0
+<==        Row: 5, 123, e10adc3949ba59abbe56e057f20f883e, 蔡石贤, null, null, 1, 1, null, 2026-05-25 12:22:46, 2026-04-27 16:34:22, 2026-04-28 16:57:48, 0
+<==        Row: 1, admin, 0192023a7bbd73250516f069df18b500, 管理员, admin@library.com, 13800138000, 2, 1, null, 2026-05-25 12:23:23, 2026-01-23 10:37:51, 2026-03-18 17:43:58, 0
+<==        Row: 2, teacher, 0192023a7bbd73250516f069df18b500, 教师用户, teacher@library.com, 13800138001, 1, 1, null, 2026-03-27 18:24:32, 2026-01-23 10:37:51, 2026-03-18 17:43:58, 0
+<==        Row: 3, student, $2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iKTVYITi, 学生用户, student@library.com, 13800138002, 1, 1, null, null, 2026-01-23 10:37:51, 2026-03-18 18:57:21, 0
+<==      Total: 8
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5ff44bf1]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6734b245] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1146178430 wrapping com.mysql.cj.jdbc.ConnectionImpl@34921035] will not be managed by Spring
+==>  Preparing: SELECT id,username,password,real_name,email,phone,role,status,avatar_url,last_login_time,created_at,updated_at,deleted FROM user WHERE deleted=0 AND (username = ? AND deleted = ?)
+==> Parameters: 123(String), 0(Integer)
+<==    Columns: id, username, password, real_name, email, phone, role, status, avatar_url, last_login_time, created_at, updated_at, deleted
+<==        Row: 5, 123, e10adc3949ba59abbe56e057f20f883e, 蔡石贤, null, null, 1, 1, null, 2026-05-25 12:22:46, 2026-04-27 16:34:22, 2026-04-28 16:57:48, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6734b245]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d3a96c3] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@435905525 wrapping com.mysql.cj.jdbc.ConnectionImpl@34921035] will not be managed by Spring
+==>  Preparing: UPDATE user SET username=?, password=?, real_name=?, role=?, status=?, last_login_time=?, created_at=?, updated_at=? WHERE id=? AND deleted=0
+==> Parameters: 123(String), e10adc3949ba59abbe56e057f20f883e(String), 蔡石贤(String), 1(Integer), 1(Integer), 2026-05-25T13:10:15.833088(LocalDateTime), 2026-04-27T16:34:22(LocalDateTime), 2026-04-28T16:57:48(LocalDateTime), 5(Long)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d3a96c3]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@25d2fbd9] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@569211835 wrapping com.mysql.cj.jdbc.ConnectionImpl@34921035] will not be managed by Spring
 ==>  Preparing: SELECT id,username,password,real_name,email,phone,role,status,avatar_url,last_login_time,created_at,updated_at,deleted FROM user WHERE deleted=0 AND (username = ? AND deleted = ?)
 ==> Parameters: 1234(String), 0(Integer)
 <==    Columns: id, username, password, real_name, email, phone, role, status, avatar_url, last_login_time, created_at, updated_at, deleted
-<==        Row: 7, 1234, e10adc3949ba59abbe56e057f20f883e, 小说爱好者, null, null, 1, 1, null, 2026-04-28 16:53:15, 2026-04-27 17:04:07, 2026-04-27 17:04:07, 0
+<==        Row: 7, 1234, e10adc3949ba59abbe56e057f20f883e, 小说爱好者, null, null, 1, 1, null, 2026-05-25 12:18:06, 2026-04-27 17:04:07, 2026-04-27 17:04:07, 0
 <==      Total: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44838a04]
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@25d2fbd9]
 Creating a new SqlSession
-SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c7aa029] was not registered for synchronization because synchronization is not active
-JDBC Connection [HikariProxyConnection@879870984 wrapping com.mysql.cj.jdbc.ConnectionImpl@44c0a884] will not be managed by Spring
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@677f26fc] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1438717433 wrapping com.mysql.cj.jdbc.ConnectionImpl@34921035] will not be managed by Spring
 ==>  Preparing: UPDATE user SET username=?, password=?, real_name=?, role=?, status=?, last_login_time=?, created_at=?, updated_at=? WHERE id=? AND deleted=0
-==> Parameters: 1234(String), e10adc3949ba59abbe56e057f20f883e(String), 小说爱好者(String), 1(Integer), 1(Integer), 2026-05-21T12:25:02.780087(LocalDateTime), 2026-04-27T17:04:07(LocalDateTime), 2026-04-27T17:04:07(LocalDateTime), 7(Long)
+==> Parameters: 1234(String), e10adc3949ba59abbe56e057f20f883e(String), 小说爱好者(String), 1(Integer), 1(Integer), 2026-05-25T13:10:56.299855(LocalDateTime), 2026-04-27T17:04:07(LocalDateTime), 2026-04-27T17:04:07(LocalDateTime), 7(Long)
 <==    Updates: 1
-Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c7aa029]
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@677f26fc]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26a42eed] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@580632289 wrapping com.mysql.cj.jdbc.ConnectionImpl@34921035] will not be managed by Spring
+==>  Preparing: SELECT id,username,password,real_name,email,phone,role,status,avatar_url,last_login_time,created_at,updated_at,deleted FROM user WHERE deleted=0 AND (username = ? AND deleted = ?)
+==> Parameters: admin(String), 0(Integer)
+<==    Columns: id, username, password, real_name, email, phone, role, status, avatar_url, last_login_time, created_at, updated_at, deleted
+<==        Row: 1, admin, 0192023a7bbd73250516f069df18b500, 管理员, admin@library.com, 13800138000, 2, 1, null, 2026-05-25 12:23:23, 2026-01-23 10:37:51, 2026-03-18 17:43:58, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@26a42eed]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5160aae9] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@1446258030 wrapping com.mysql.cj.jdbc.ConnectionImpl@34921035] will not be managed by Spring
+==>  Preparing: UPDATE user SET username=?, password=?, real_name=?, email=?, phone=?, role=?, status=?, last_login_time=?, created_at=?, updated_at=? WHERE id=? AND deleted=0
+==> Parameters: admin(String), 0192023a7bbd73250516f069df18b500(String), 管理员(String), admin@library.com(String), 13800138000(String), 2(Integer), 1(Integer), 2026-05-25T13:17:17.647733(LocalDateTime), 2026-01-23T10:37:51(LocalDateTime), 2026-03-18T17:43:58(LocalDateTime), 1(Long)
+<==    Updates: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5160aae9]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@602566b] was not registered for synchronization because synchronization is not active
+JDBC Connection [HikariProxyConnection@37606003 wrapping com.mysql.cj.jdbc.ConnectionImpl@34921035] will not be managed by Spring
+==>  Preparing: SELECT * FROM `user` WHERE deleted = 0 ORDER BY created_at DESC
+==> Parameters: 
+<==    Columns: id, username, password, real_name, email, phone, role, status, avatar_url, last_login_time, created_at, updated_at, deleted
+<==        Row: 19, 990704, e10adc3949ba59abbe56e057f20f883e, 涟一, null, null, 1, 1, null, 2026-05-07 10:17:57, 2026-05-07 10:17:52, 2026-05-07 10:17:52, 0
+<==        Row: 18, 123456, e10adc3949ba59abbe56e057f20f883e, 热门推荐测试账号, null, null, 1, 1, null, 2026-04-28 16:58:10, 2026-04-28 16:58:05, 2026-04-28 16:58:05, 0
+<==        Row: 8, 12345, e10adc3949ba59abbe56e057f20f883e, 响应时间测试账号, null, null, 1, 1, null, 2026-04-28 16:34:20, 2026-04-28 16:15:09, 2026-04-28 16:15:09, 0
+<==        Row: 7, 1234, e10adc3949ba59abbe56e057f20f883e, 小说爱好者, null, null, 1, 1, null, 2026-05-25 13:10:56, 2026-04-27 17:04:07, 2026-04-27 17:04:07, 0
+<==        Row: 5, 123, e10adc3949ba59abbe56e057f20f883e, 蔡石贤, null, null, 1, 1, null, 2026-05-25 13:10:16, 2026-04-27 16:34:22, 2026-04-28 16:57:48, 0
+<==        Row: 1, admin, 0192023a7bbd73250516f069df18b500, 管理员, admin@library.com, 13800138000, 2, 1, null, 2026-05-25 13:17:18, 2026-01-23 10:37:51, 2026-03-18 17:43:58, 0
+<==        Row: 2, teacher, 0192023a7bbd73250516f069df18b500, 教师用户, teacher@library.com, 13800138001, 1, 1, null, 2026-03-27 18:24:32, 2026-01-23 10:37:51, 2026-03-18 17:43:58, 0
+<==        Row: 3, student, $2a$10$N.zmdr9k7uOCQb376NoUnuTJ8iAt6Z5EHsM8lE9lBOsl7iKTVYITi, 学生用户, student@library.com, 13800138002, 1, 1, null, null, 2026-01-23 10:37:51, 2026-03-18 18:57:21, 0
+<==      Total: 8
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@602566b]
+2026-05-25T14:35:32.230+08:00  INFO 88894 --- [user-service] [-localhost-1049] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 729
+2026-05-25T14:35:32.245+08:00  INFO 88894 --- [user-service] [-localhost-1049] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 729
+2026-05-25T14:35:53.926+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m45s112ms).
+2026-05-25T14:51:45.573+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m51s649ms).
+2026-05-25T16:12:41.786+08:00  INFO 88894 --- [user-service] [-localhost-1853] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 735
+2026-05-25T16:12:41.789+08:00  INFO 88894 --- [user-service] [-localhost-1853] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 735
+2026-05-25T16:13:04.298+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m45s539ms).
+2026-05-25T16:19:51.968+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=6m47s670ms).
+2026-05-25T16:28:35.819+08:00  INFO 88894 --- [user-service] [-localhost-1874] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 737
+2026-05-25T16:28:35.823+08:00  INFO 88894 --- [user-service] [-localhost-1874] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 737
+2026-05-25T16:28:35.837+08:00  INFO 88894 --- [user-service] [-localhost-1833] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Receive server push request, request = ClientDetectionRequest, requestId = 738
+2026-05-25T16:28:35.839+08:00  INFO 88894 --- [user-service] [-localhost-1833] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Ack server push request, request = ClientDetectionRequest, requestId = 738
+2026-05-25T16:28:55.101+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m33s120ms).
+2026-05-25T23:51:11.347+08:00  INFO 88894 --- [user-service] [-localhost-7099] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 740
+2026-05-25T23:51:11.357+08:00  INFO 88894 --- [user-service] [-localhost-7099] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 740
+2026-05-25T23:51:26.467+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m27s336ms).
+2026-05-26T00:08:35.009+08:00  INFO 88894 --- [user-service] [-localhost-6899] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Receive server push request, request = ClientDetectionRequest, requestId = 744
+2026-05-26T00:08:35.012+08:00  INFO 88894 --- [user-service] [-localhost-6899] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Ack server push request, request = ClientDetectionRequest, requestId = 744
+2026-05-26T00:09:01.977+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m5s498ms).
+2026-05-26T00:26:21.849+08:00  INFO 88894 --- [user-service] [-localhost-6908] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Receive server push request, request = ClientDetectionRequest, requestId = 749
+2026-05-26T00:26:21.849+08:00  INFO 88894 --- [user-service] [-localhost-7120] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 748
+2026-05-26T00:26:21.851+08:00  INFO 88894 --- [user-service] [-localhost-6908] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Ack server push request, request = ClientDetectionRequest, requestId = 749
+2026-05-26T00:26:21.851+08:00  INFO 88894 --- [user-service] [-localhost-7120] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 748
+2026-05-26T00:26:30.681+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m28s704ms).
+2026-05-26T01:35:06.108+08:00  INFO 88894 --- [user-service] [-localhost-7650] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Receive server push request, request = ClientDetectionRequest, requestId = 751
+2026-05-26T01:35:06.109+08:00  INFO 88894 --- [user-service] [-localhost-7873] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 750
+2026-05-26T01:35:06.112+08:00  INFO 88894 --- [user-service] [-localhost-7650] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Ack server push request, request = ClientDetectionRequest, requestId = 751
+2026-05-26T01:35:06.112+08:00  INFO 88894 --- [user-service] [-localhost-7873] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 750
+2026-05-26T01:35:28.204+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m56s841ms).
+2026-05-26T01:52:00.891+08:00  INFO 88894 --- [user-service] [-localhost-7884] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 755
+2026-05-26T01:52:00.891+08:00  INFO 88894 --- [user-service] [-localhost-7660] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Receive server push request, request = ClientDetectionRequest, requestId = 756
+2026-05-26T01:52:00.894+08:00  INFO 88894 --- [user-service] [-localhost-7660] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Ack server push request, request = ClientDetectionRequest, requestId = 756
+2026-05-26T01:52:00.894+08:00  INFO 88894 --- [user-service] [-localhost-7884] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 755
+2026-05-26T01:52:04.881+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m36s678ms).
+2026-05-26T02:09:06.672+08:00  INFO 88894 --- [user-service] [-localhost-7896] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 760
+2026-05-26T02:09:06.672+08:00  INFO 88894 --- [user-service] [-localhost-7669] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Receive server push request, request = ClientDetectionRequest, requestId = 761
+2026-05-26T02:09:06.674+08:00  INFO 88894 --- [user-service] [-localhost-7896] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 760
+2026-05-26T02:09:06.674+08:00  INFO 88894 --- [user-service] [-localhost-7669] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Ack server push request, request = ClientDetectionRequest, requestId = 761
+2026-05-26T02:09:22.543+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m47s651ms).
+2026-05-26T02:26:27.333+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m4s790ms).
+2026-05-26T02:42:51.468+08:00  INFO 88894 --- [user-service] [-localhost-7689] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Receive server push request, request = ClientDetectionRequest, requestId = 763
+2026-05-26T02:42:51.468+08:00  INFO 88894 --- [user-service] [-localhost-7920] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 762
+2026-05-26T02:42:51.472+08:00  INFO 88894 --- [user-service] [-localhost-7920] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 762
+2026-05-26T02:42:51.472+08:00  INFO 88894 --- [user-service] [-localhost-7689] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Ack server push request, request = ClientDetectionRequest, requestId = 763
+2026-05-26T02:43:04.101+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m6s748ms).
+2026-05-26T02:59:31.369+08:00  INFO 88894 --- [user-service] [-localhost-7931] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 767
+2026-05-26T02:59:31.369+08:00  INFO 88894 --- [user-service] [-localhost-7699] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Receive server push request, request = ClientDetectionRequest, requestId = 768
+2026-05-26T02:59:31.372+08:00  INFO 88894 --- [user-service] [-localhost-7699] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Ack server push request, request = ClientDetectionRequest, requestId = 768
+2026-05-26T02:59:31.372+08:00  INFO 88894 --- [user-service] [-localhost-7931] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 767
+2026-05-26T02:59:55.894+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m21s780ms).
+2026-05-26T03:19:43.264+08:00  INFO 88894 --- [user-service] [-localhost-7963] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 771
+2026-05-26T03:19:43.264+08:00  INFO 88894 --- [user-service] [-localhost-7730] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Receive server push request, request = ClientDetectionRequest, requestId = 772
+2026-05-26T03:19:43.266+08:00  INFO 88894 --- [user-service] [-localhost-7730] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Ack server push request, request = ClientDetectionRequest, requestId = 772
+2026-05-26T03:19:43.266+08:00  INFO 88894 --- [user-service] [-localhost-7963] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 771
+2026-05-26T03:20:10.481+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m14s551ms).
+2026-05-26T03:40:15.988+08:00  INFO 88894 --- [user-service] [-localhost-8023] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 776
+2026-05-26T03:40:15.988+08:00  INFO 88894 --- [user-service] [-localhost-7785] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Receive server push request, request = ClientDetectionRequest, requestId = 777
+2026-05-26T03:40:15.991+08:00  INFO 88894 --- [user-service] [-localhost-8023] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 776
+2026-05-26T03:40:15.991+08:00  INFO 88894 --- [user-service] [-localhost-7785] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Ack server push request, request = ClientDetectionRequest, requestId = 777
+2026-05-26T03:40:24.561+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=16m14s28ms).
+2026-05-26T03:56:01.553+08:00  INFO 88894 --- [user-service] [-localhost-8036] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 781
+2026-05-26T03:56:01.553+08:00  INFO 88894 --- [user-service] [-localhost-7795] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Receive server push request, request = ClientDetectionRequest, requestId = 782
+2026-05-26T03:56:01.556+08:00  INFO 88894 --- [user-service] [-localhost-7795] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Ack server push request, request = ClientDetectionRequest, requestId = 782
+2026-05-26T03:56:01.557+08:00  INFO 88894 --- [user-service] [-localhost-8036] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 781
+2026-05-26T03:56:01.574+08:00 ERROR 88894 --- [user-service] [-localhost-7796] c.a.n.c.remote.client.grpc.GrpcClient    : [1779685607110_127.0.0.1_54010]Request stream onCompleted, switch server
+2026-05-26T03:56:01.587+08:00  INFO 88894 --- [user-service] [remote.worker.1] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+2026-05-26T03:56:01.598+08:00  INFO 88894 --- [user-service] [remote.worker.1] c.a.n.c.remote.client.grpc.GrpcClient    : grpc client connection server:localhost ip,serverPort:9848,grpcTslConfig:{"sslProvider":"","enableTls":false,"mutualAuthEnable":false,"trustAll":false}
+2026-05-26T03:56:01.650+08:00  INFO 88894 --- [user-service] [remote.worker.1] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Success to connect a server [localhost:8848], connectionId = 1779738961638_127.0.0.1_62235
+2026-05-26T03:56:01.651+08:00  INFO 88894 --- [user-service] [remote.worker.1] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Abandon prev connection, server is localhost:8848, connectionId is 1779685607110_127.0.0.1_54010
+2026-05-26T03:56:01.651+08:00  INFO 88894 --- [user-service] [remote.worker.1] com.alibaba.nacos.common.remote.client   : Close current connection 1779685607110_127.0.0.1_54010
+2026-05-26T03:56:01.660+08:00  INFO 88894 --- [user-service] [remote.worker.0] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Notify disconnected event to listeners
+2026-05-26T03:56:01.661+08:00  WARN 88894 --- [user-service] [remote.worker.0] com.alibaba.nacos.client.naming          : Grpc connection disconnect, mark to redo
+2026-05-26T03:56:01.666+08:00  WARN 88894 --- [user-service] [remote.worker.0] com.alibaba.nacos.client.naming          : mark to redo completed
+2026-05-26T03:56:01.666+08:00  INFO 88894 --- [user-service] [remote.worker.0] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Notify connected event to listeners.
+2026-05-26T03:56:01.666+08:00  INFO 88894 --- [user-service] [remote.worker.0] com.alibaba.nacos.client.naming          : Grpc connection connect
+2026-05-26T03:56:04.546+08:00  INFO 88894 --- [user-service] [ing.grpc.redo.0] com.alibaba.nacos.client.naming          : Redo instance operation REGISTER for DEFAULT_GROUP@@user-service
+2026-05-26T03:56:22.015+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m27s443ms).
+2026-05-26T05:02:45.202+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m22s575ms).
+2026-05-26T05:56:34.049+08:00  INFO 88894 --- [user-service] [-localhost-8862] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Receive server push request, request = ClientDetectionRequest, requestId = 792
+2026-05-26T05:56:34.051+08:00  INFO 88894 --- [user-service] [-localhost-8862] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Ack server push request, request = ClientDetectionRequest, requestId = 792
+2026-05-26T05:56:34.049+08:00  INFO 88894 --- [user-service] [-localhost-9137] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 789
+2026-05-26T05:56:34.052+08:00  INFO 88894 --- [user-service] [-localhost-9137] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 789
+2026-05-26T05:56:52.164+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m36s476ms).
+2026-05-26T06:15:39.008+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=15m46s803ms).
+2026-05-26T06:34:01.210+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m52s194ms).
+2026-05-26T07:14:18.406+08:00  INFO 88894 --- [user-service] [-localhost-9486] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 794
+2026-05-26T07:14:18.406+08:00  INFO 88894 --- [user-service] [-localhost-9190] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Receive server push request, request = ClientDetectionRequest, requestId = 797
+2026-05-26T07:14:18.508+08:00  INFO 88894 --- [user-service] [-localhost-9190] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Ack server push request, request = ClientDetectionRequest, requestId = 797
+2026-05-26T07:14:18.509+08:00  INFO 88894 --- [user-service] [-localhost-9486] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 794
+2026-05-26T07:14:20.661+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m19s175ms).
+2026-05-26T07:33:34.614+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=10m43s821ms).
+2026-05-26T08:14:52.510+08:00  INFO 88894 --- [user-service] [-localhost-9598] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Receive server push request, request = ClientDetectionRequest, requestId = 801
+2026-05-26T08:14:52.513+08:00  INFO 88894 --- [user-service] [-localhost-9598] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Ack server push request, request = ClientDetectionRequest, requestId = 801
+2026-05-26T08:15:08.215+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m3s294ms).
+2026-05-26T08:42:30.464+08:00  INFO 88894 --- [user-service] [localhost-10191] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 802
+2026-05-26T08:42:30.465+08:00  INFO 88894 --- [user-service] [localhost-10191] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 802
+2026-05-26T08:42:46.226+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5m37s701ms).
+2026-05-26T08:51:41.745+08:00  INFO 88894 --- [user-service] [-localhost-9878] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Receive server push request, request = ClientDetectionRequest, requestId = 809
+2026-05-26T08:51:41.751+08:00  INFO 88894 --- [user-service] [-localhost-9878] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Ack server push request, request = ClientDetectionRequest, requestId = 809
+2026-05-26T08:51:41.745+08:00  INFO 88894 --- [user-service] [localhost-10197] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 806
+2026-05-26T08:51:41.752+08:00  INFO 88894 --- [user-service] [localhost-10197] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 806
+2026-05-26T09:01:35.233+08:00  INFO 88894 --- [user-service] [localhost-10201] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Receive server push request, request = ClientDetectionRequest, requestId = 811
+2026-05-26T09:01:35.233+08:00  INFO 88894 --- [user-service] [-localhost-9880] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Receive server push request, request = ClientDetectionRequest, requestId = 814
+2026-05-26T09:01:35.323+08:00  INFO 88894 --- [user-service] [-localhost-9880] com.alibaba.nacos.common.remote.client   : [59d2e1d8-bbba-4488-93f5-ffdb0163d419] Ack server push request, request = ClientDetectionRequest, requestId = 814
+2026-05-26T09:01:35.323+08:00  INFO 88894 --- [user-service] [localhost-10201] com.alibaba.nacos.common.remote.client   : [4f14b02f-c33f-4e2f-bc8c-e785feb08831_config-0] Ack server push request, request = ClientDetectionRequest, requestId = 811
+2026-05-26T09:01:42.815+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=18m56s582ms).
+2026-05-26T09:02:11.182+08:00  WARN 88894 --- [user-service] [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Retrograde clock change detected (housekeeper delta=28s377ms), soft-evicting connections from pool.

@@ -22,5 +22,13 @@ export const borrowApi = {
     return request.get<PageResponse<BorrowRecord>>('/v1/borrow/history', {
       params: { current, size }
     })
+  },
+
+  // 获取仪表盘统计数据
+  getDashboardStats() {
+    return request.get<{
+      borrowTrend: Array<{ date: string; count: number }>
+      recentActivities: Array<{ type: string; bookTitle: string; time: string }>
+    }>('/v1/stats/dashboard')
   }
 }

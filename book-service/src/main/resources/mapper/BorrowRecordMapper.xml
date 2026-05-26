@@ -29,4 +29,22 @@
         LIMIT 1
     </select>
 
+    <!-- 统计最近N天每日借阅数量 -->
+    <select id="countBorrowTrend" resultType="java.util.Map">
+        SELECT DATE(borrow_time) AS date, COUNT(*) AS count
+        FROM borrow_record
+        WHERE borrow_time >= DATE_SUB(CURDATE(), INTERVAL #{days} DAY)
+        GROUP BY DATE(borrow_time)
+        ORDER BY date ASC
+    </select>
+
+    <!-- 查询最近N条借阅活动记录 -->
+    <select id="listRecentActivities" resultType="java.util.Map">
+        SELECT br.status AS type, b.title AS bookTitle, br.borrow_time AS time
+        FROM borrow_record br
+        LEFT JOIN book b ON br.book_id = b.id
+        ORDER BY br.borrow_time DESC
+        LIMIT #{limit}
+    </select>
+
 </mapper>

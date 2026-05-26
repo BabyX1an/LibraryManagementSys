@@ -12,8 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.List;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
 
 /**
  * 借阅服务实现类
@@ -115,5 +117,38 @@ public class BorrowServiceImpl extends ServiceImpl<BorrowRecordMapper, BorrowRec
     @Override
     public Page<BorrowRecord> getBorrowHistory(Page<BorrowRecord> page, Long userId) {
         return borrowRecordMapper.pageHistoryByUserId(page, userId);
+    }
+
+    @Override
+    public Map<String, Object> getDashboardStats() {
+        Map<String, Object> result = new HashMap<>();
+
+        // 1. 借阅趋势：最近7天每日借阅量
+        List<Map<String, Object>> trendData = borrowRecordMapper.countBorrowTrend(7);
+        // 补全缺失的日期（没有借阅的天显示为0）
+        Map<String, Object> trendMap = new LinkedHashMap<>();
+        for (Map<String, Object> item : trendData) {
+            trendMap.put(item.get("date").toString(), item.get("count"));
+        }
+        List<Map<String, Object>> borrowTrend = new ArrayList<>();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        for (int i = 6; i >= 0; i--) {
+            String date = LocalDate.now().minusDays(i).format(formatter);
+            Map<String, Object> dayData = new HashMap<>();
+            dayData.put("date", date.substring(5)); // 只显示 MM-dd
+            dayData.put("count", trendMap.getOrDefault(date, 0));
+            borrowTrend.add(dayData);
+        }
+        result.put("borrowTrend", borrowTrend);
+
+        // 2. 最近10条活动记录
+        List<Map<String, Object>> activities = borrowRecordMapper.listRecentActivities(10);
+        for (Map<String, Object> activity : activities) {
+            int status = ((Number) activity.get("type")).intValue();
+            activity.put("type", status == 2 ? "return" : "borrow");
+        }
+        result.put("recentActivities", activities);
+
+        return result;
     }
 }

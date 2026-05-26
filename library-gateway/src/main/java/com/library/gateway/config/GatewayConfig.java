@@ -31,6 +31,11 @@ public class GatewayConfig {
                         .path("/api/v1/ai/**")
                         .uri("http://localhost:8108")
                 )
+                // Stats Service 路由（统计服务在book-service中）
+                .route("stats-service", r -> r
+                        .path("/api/v1/stats/**")
+                        .uri("http://localhost:8105")
+                )
                 .build();
     }
 }
