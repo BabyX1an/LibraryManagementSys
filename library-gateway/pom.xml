@@ -26,6 +26,12 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
 
+        <!-- Spring Cloud LoadBalancer (lb:// 路由需要) -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+        </dependency>
+
         <!-- Bootstrap 支持 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

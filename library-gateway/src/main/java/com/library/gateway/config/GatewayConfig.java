@@ -14,27 +14,27 @@ public class GatewayConfig {
                 // Book Service 路由
                 .route("book-service", r -> r
                         .path("/api/v1/books/**")
-                        .uri("http://localhost:8105")
+                        .uri("lb://book-service")
                 )
                 // User Service 路由
                 .route("user-service", r -> r
                         .path("/api/v1/users/**")
-                        .uri("http://localhost:8106")
+                        .uri("lb://user-service")
                 )
                 // Borrow Service 路由（借阅服务在book-service中）
                 .route("borrow-service", r -> r
                         .path("/api/v1/borrow/**")
-                        .uri("http://localhost:8105")
+                        .uri("lb://book-service")
                 )
                 // AI Service 路由
                 .route("ai-service", r -> r
                         .path("/api/v1/ai/**")
-                        .uri("http://localhost:8108")
+                        .uri("lb://ai-service")
                 )
                 // Stats Service 路由（统计服务在book-service中）
                 .route("stats-service", r -> r
                         .path("/api/v1/stats/**")
-                        .uri("http://localhost:8105")
+                        .uri("lb://book-service")
                 )
                 .build();
     }

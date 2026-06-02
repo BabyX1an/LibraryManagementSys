@@ -21,17 +21,17 @@ spring:
           lower-case-service-id: true
       routes:
         - id: book-service
-          uri: http://localhost:8105
+          uri: lb://book-service
           predicates:
             - Path=/api/v1/books/**
           filters:
             - StripPrefix=0
         - id: book-images
-          uri: http://localhost:8105
+          uri: lb://book-service
           predicates:
             - Path=/images/**
         - id: user-service
-          uri: http://localhost:8106
+          uri: lb://user-service
           predicates:
             - Path=/api/v1/users/**
           filters:

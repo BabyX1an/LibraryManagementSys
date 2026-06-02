@@ -18,6 +18,13 @@ class Settings(BaseSettings):
     REDIS_PORT: int = 6379
     REDIS_DB: int = 1  # 使用不同的DB避免冲突
 
+    # Nacos配置
+    NACOS_SERVER: str = "localhost:8848"
+    NACOS_NAMESPACE: str = "adbaa99d-5656-4a9c-87fe-0c51137d338f"
+    NACOS_GROUP: str = "DEFAULT_GROUP"
+    NACOS_USERNAME: str = "nacos"
+    NACOS_PASSWORD: str = "nacos"
+
     # BERT模型配置
     BERT_MODEL: str = "paraphrase-multilingual-MiniLM-L12-v2"
     EMBEDDING_CACHE_KEY: str = "book:embeddings"
