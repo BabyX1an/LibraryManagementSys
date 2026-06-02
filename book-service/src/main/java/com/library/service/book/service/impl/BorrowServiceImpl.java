@@ -37,8 +37,8 @@ public class BorrowServiceImpl extends ServiceImpl<BorrowRecordMapper, BorrowRec
     @Override
     @Transactional
     public BorrowRecord borrowBook(Long userId, Long bookId) {
-        // 检查图书是否存在
-        Book book = bookMapper.selectById(bookId);
+        // 加行锁查询图书，防止并发超卖
+        Book book = bookMapper.selectByIdForUpdate(bookId);
         if (book == null) {
             throw new RuntimeException("图书不存在");
         }

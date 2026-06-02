@@ -5,11 +5,18 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.library.service.book.entity.Book;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 /**
  * 图书信息Mapper接口
  */
 public interface BookMapper extends BaseMapper<Book> {
+
+    /**
+     * 加行锁查询图书（用于借阅防超卖）
+     */
+    @Select("SELECT * FROM book WHERE id = #{id} FOR UPDATE")
+    Book selectByIdForUpdate(@Param("id") Long id);
 
     /**
      * 分页查询图书
