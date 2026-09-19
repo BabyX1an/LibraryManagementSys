@@ -1,16 +1,12 @@
-INFO:     Started server process [62542]
+INFO:     Started server process [86201]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://0.0.0.0:8108 (Press CTRL+C to quit)
 正在预热AI模型...
 AI模型预热完成
-已注册到Nacos: ai-service -> 10.6.177.136:8108
-INFO:     10.6.177.136:65021 - "GET /api/v1/ai/search?q=%E6%95%99%E8%82%B2%E7%9B%B8%E5%85%B3&top_k=6 HTTP/1.1" 200 OK
-INFO:     10.6.177.136:52123 - "GET /api/v1/ai/recommend?top_k=10 HTTP/1.1" 200 OK
-INFO:     10.6.177.136:62138 - "GET /api/v1/ai/recommend?top_k=10 HTTP/1.1" 200 OK
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [62542]
-/opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/lib/python3.12/multiprocessing/resource_tracker.py:279: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown
-  warnings.warn('resource_tracker: There appear to be %d '
+已注册到Nacos: ai-service -> 10.3.71.50:8108
+INFO:     10.3.71.50:64660 - "GET /api/v1/ai/recommend?top_k=10 HTTP/1.1" 200 OK
+INFO:     10.3.71.50:64694 - "GET /api/v1/ai/recommend?top_k=10 HTTP/1.1" 200 OK
+INFO:     10.3.71.50:64836 - "GET /api/v1/ai/recommend?top_k=10 HTTP/1.1" 200 OK
+INFO:     10.3.71.50:49825 - "GET /api/v1/ai/recommend?top_k=10 HTTP/1.1" 200 OK
+INFO:     10.3.71.50:50093 - "GET /api/v1/ai/recommend?top_k=10 HTTP/1.1" 200 OK

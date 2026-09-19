@@ -37,3 +37,8 @@ venv/
 env/
 .venv/git
 __pycache__/
+
+# Local environment configuration
+.env
+.env.*
+!.env.example
